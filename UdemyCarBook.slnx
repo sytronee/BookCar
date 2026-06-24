@@ -2,4 +2,10 @@
   <Folder Name="/Core/">
     <Project Path="Core/UdemyCarBook.Domain/UdemyCarBook.Domain.csproj" />
   </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Infrastructure/UdemyCarBook.Persistence/UdemyCarBook.Persistence.csproj" Id="ac1503e0-74b7-4ce7-92f6-bd031905ac9a" />
+  </Folder>
+  <Folder Name="/Presentation/">
+    <Project Path="Presentation/UdemyCarBook.WebApi/UdemyCarBook.WebApi.csproj" Id="36a3168b-a44f-4fa9-ad30-328d6ce36f6a" />
+  </Folder>
 </Solution>
