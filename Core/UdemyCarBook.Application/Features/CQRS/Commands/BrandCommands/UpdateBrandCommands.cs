@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UdemyCarBook.Domain.Entities
+namespace UdemyCarBook.Application.Features.CQRS.Commands.BrandCommands
 {
-    public class Brand
+    public class UpdateBrandCommands
     {
         public int BrandID { get; set; }
-        public string Name { get; set; } 
-        public List<Car> Cars { get; set; }
+        public string Name { get; set; }
     }
 }
