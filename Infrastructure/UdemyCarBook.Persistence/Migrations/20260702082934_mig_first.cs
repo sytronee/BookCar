@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace UdemyCarBook.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class migfirst : Migration
+    public partial class mig_first : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -89,13 +89,13 @@ namespace UdemyCarBook.Persistence.Migrations
                 name: "Features",
                 columns: table => new
                 {
-                    FutureId = table.Column<int>(type: "int", nullable: false)
+                    FeatureId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Features", x => x.FutureId);
+                    table.PrimaryKey("PK_Features", x => x.FeatureId);
                 });
 
             migrationBuilder.CreateTable(
@@ -262,7 +262,7 @@ namespace UdemyCarBook.Persistence.Migrations
                         name: "FK_CarFeatures_Features_FeatureID",
                         column: x => x.FeatureID,
                         principalTable: "Features",
-                        principalColumn: "FutureId",
+                        principalColumn: "FeatureId",
                         onDelete: ReferentialAction.Cascade);
                 });
 

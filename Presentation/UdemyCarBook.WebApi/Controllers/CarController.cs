@@ -68,7 +68,6 @@ namespace UdemyCarBook.WebApi.Controllers
         }
 
         [HttpGet("GetCarWithBrand")]
-
         public IActionResult GetCarWithBrand()
         {
             var values = _getCarWithBrandQueryHandler.handle();

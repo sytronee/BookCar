@@ -270,17 +270,17 @@ namespace UdemyCarBook.Persistence.Migrations
 
             modelBuilder.Entity("UdemyCarBook.Domain.Entities.Feature", b =>
                 {
-                    b.Property<int>("FutureId")
+                    b.Property<int>("FeatureId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FutureId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FeatureId"));
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("FutureId");
+                    b.HasKey("FeatureId");
 
                     b.ToTable("Features");
                 });
@@ -462,7 +462,7 @@ namespace UdemyCarBook.Persistence.Migrations
                         .IsRequired();
 
                     b.HasOne("UdemyCarBook.Domain.Entities.Feature", "Feature")
-                        .WithMany()
+                        .WithMany("CarFeatures")
                         .HasForeignKey("FeatureID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -504,6 +504,11 @@ namespace UdemyCarBook.Persistence.Migrations
                 });
 
             modelBuilder.Entity("UdemyCarBook.Domain.Entities.CarFeature", b =>
+                {
+                    b.Navigation("CarFeatures");
+                });
+
+            modelBuilder.Entity("UdemyCarBook.Domain.Entities.Feature", b =>
                 {
                     b.Navigation("CarFeatures");
                 });

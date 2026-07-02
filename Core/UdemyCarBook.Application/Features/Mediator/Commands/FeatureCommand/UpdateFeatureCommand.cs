@@ -1,18 +1,15 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UdemyCarBook.Domain.Entities
+namespace UdemyCarBook.Application.Features.Mediator.Commands.FeatureCommand
 {
-    public class Feature
+    public class UpdateFeatureCommand : IRequest
     {
-        [Key]
         public int FeatureId { get; set; }
         public string Name { get; set; }
-
-        public List<CarFeature> CarFeatures { get; set; }
     }
 }

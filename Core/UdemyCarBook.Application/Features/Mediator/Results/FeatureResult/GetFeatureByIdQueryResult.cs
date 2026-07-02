@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UdemyCarBook.Domain.Entities
+namespace UdemyCarBook.Application.Features.Mediator.Results.FeatureResult
 {
-    public class Feature
+    public class GetFeatureByIdQueryResult
     {
-        [Key]
         public int FeatureId { get; set; }
         public string Name { get; set; }
-
-        public List<CarFeature> CarFeatures { get; set; }
     }
 }

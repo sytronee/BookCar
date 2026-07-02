@@ -1,0 +1,20 @@
+﻿using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using UdemyCarBook.Application.Features.Mediator.Results.FeatureResult;
+
+namespace UdemyCarBook.Application.Features.Mediator.Queries.FeatureQueries
+{
+    public class GetFeatureQuery : IRequest<List<GetFeatureQueryResults>>
+    {
+        public int Id { get; set; }
+
+        public GetFeatureQuery(int id)
+        {
+            Id = id;
+        }
+    }
+}
