@@ -10,11 +10,6 @@ namespace UdemyCarBook.Application.Features.Mediator.Queries.FeatureQueries
 {
     public class GetFeatureQuery : IRequest<List<GetFeatureQueryResults>>
     {
-        public int Id { get; set; }
-
-        public GetFeatureQuery(int id)
-        {
-            Id = id;
-        }
+        
     }
 }

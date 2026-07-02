@@ -23,7 +23,6 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.FeatureHandler
         {
             await _repository.CreateAsync(new Feature
             {
-
                 Name = request.Name,
             });
         }

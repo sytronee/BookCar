@@ -10,6 +10,11 @@ namespace UdemyCarBook.Application.Features.Mediator.Queries.FooterAddressQuerie
 {
     public class GetFooterAddressByIdQuery:IRequest<GetFooterAddressByIdResult>
     {
+        public int Id { get; set; }
 
+        public GetFooterAddressByIdQuery(int ıd)
+        {
+            Id = ıd;
+        }
     }
 }
